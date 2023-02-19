@@ -16,3 +16,18 @@ const text = message === messageUser ? 'True!' : "Don't you know? ECMAScript!";
 
 alert(text);
  */
+
+//2. Напишіть програму, яка запитає у користувача "Enter the number of minutes to format"
+//число (кількість хвилин) і виведе в консоль
+//рядок у форматі годин і хвилин, тобто 70 має повернути у консоль "01:10"
+
+// let time = prompt("Enter the number of minutes to format");
+// if (!time) {
+//   alert("Ви не ввели дані");
+// } else {
+//   let hours = Math.floor(time / 60)
+//     .toString()
+//     .padStart(2, 0);
+//   let minutes = (time % 60).toString().padStart(2, 0);
+//   alert(`${hours}:${minutes}`);
+// }
