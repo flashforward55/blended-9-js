@@ -226,3 +226,13 @@ alert(text);
 // calculator.read("five", 0);
 // console.log(calculator.sum());
 // console.log(calculator.mult());
+
+//5. Напишіть функцію updateObject, яка приймає об'єкт та ключ
+//і повертає новий об'єкт без вказаної властивості
+//Очікуваний результат ({ a: 1, b: 2, c: 3 }, 'b') => {a: 1, c: 3}
+function updateObject(object, removeKey) {
+  const newObject = { ...object };
+  delete newObject[removeKey];
+  return newObject;
+}
+console.log(updateObject({ a: 1, b: 2, c: 3 }, "b"));
