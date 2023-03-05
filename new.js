@@ -159,21 +159,43 @@ alert(text);
 
 //2. Є об'єкт, в якому зберігаються зарплати команди. Напишіть функцію getTotalSalary, яка буде повертати загальну суму зарплат. Якщо об'єкт пустий, то функція має повернути 0
 
-const salaries = {
-  mango: 1000,
-  poly: 1600,
-  ajax: 1470,
-};
+// const salaries = {
+//   mango: 1000,
+//   poly: 1600,
+//   ajax: 1470,
+// };
 
-let totalSalary = 0;
-function getTotalSalary(salaries) {
-  const values = Object.values(salaries);
+// let totalSalary = 0;
+// function getTotalSalary(salaries) {
+//   const values = Object.values(salaries);
 
-  for (const value of values) {
-    totalSalary += value;
-  }
+//   for (const value of values) {
+//     totalSalary += value;
+//   }
 
-  return totalSalary;
-}
+//   return totalSalary;
+// }
 
-console.log(getTotalSalary(salaries));
+// console.log(getTotalSalary(salaries));
+
+
+//3. Напишіть фукцію calcTotalPrice(stones, stonesName),
+//яка приймає масив об'єктів і рядок з назвою каменю.
+//Функція обчислює і повертає загальну вартість каменів з таким іменем
+
+// const stones = [
+//   { name: "emerald", price: 1300, quantity: 4 },
+//   { name: "diamond", price: 2700, quantity: 6 },
+//   { name: "sapphire", price: 400, quantity: 7 },
+//   { name: "rubble", price: 150, quantity: 100 },
+// ];
+
+// function calcTotalPrice(stones, stonesName){
+// for (const stone of stones){
+//   if(stone.name === stonesName){
+//     return stone.price*stone.quantity
+//   }
+  
+// }
+// }
+// console.log(calcTotalPrice(stones, "rubble"))
