@@ -499,6 +499,12 @@ const users = [
 //  Напишіть функцію getUsersByColor(users, color), яка отримує масив користувачів
 //   і колір очей та повертає масив користувачів з таким кольором (властивість eyeColor)
 
-const getUsersByColor = (users, color) => {
-  return users.filter((user) => user.eyeColor === color);
-};
+// const getUsersByColor = (users, color) => {
+//   return users.filter((user) => user.eyeColor === color);
+// };
+
+// const getUserWithEmail = (users, email) => {
+//   return users.find((user) => user.email === email);
+  
+// }
+// console.log(getUserWithEmail(users, "shereeanthony@kog.com"))
