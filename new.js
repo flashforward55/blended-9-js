@@ -528,3 +528,19 @@ const newskils = new Set(allSkils);
 const newSortSkils = [...newskils].sort((a, b) => a.localeCompare(b));
 
 console.log(newSortSkils);
+
+// В каждом массиве есть уникальная строка, в которой не повторяются буквы. Найдите и выведите в консоль эту строчку.должен быть такой результат
+//findUniq(['abc', 'acb', 'bac', 'foo', 'bca', 'cab', 'cba']); // === 'foo'
+// findUniq(["fghj", "ghfj", "abcd", "jhgf", "fghj", "fgjh", "ghjf"]));// === 'abcd'
+// findUniq(["qwe", "camp", "acmp", "pmac", "camp", "apmc", "pmac"])); // === 'qwe'
+
+function findUniq(arr) {
+  let newArr = arr.map(a => {
+    return [...new Set(a.toLowerCase())].sort().join('');
+  });
+  for (let i = 0; i < newArr.length; i++) {
+    if (newArr.indexOf(newArr[i]) === newArr.lastIndexOf(newArr[i])) return arr[i];
+  }
+}
+
+console.log(findUniq(['qwe', 'camp', 'acmp', 'pmac', 'camp', 'apmc', 'pmac']));
