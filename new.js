@@ -505,6 +505,15 @@ const users = [
 
 // const getUserWithEmail = (users, email) => {
 //   return users.find((user) => user.email === email);
-  
+
 // }
 // console.log(getUserWithEmail(users, "shereeanthony@kog.com"))
+
+// task 5
+// Напиши функцію calculateTotalBalance(users), яка поверне загальну суму балансів (поле balance) користувачів
+
+// function calculateTotalBalance(users) {
+//   return users.reduce((acc, user) => acc + user.balance, 0);
+// }
+
+// console.log(calculateTotalBalance(users));
