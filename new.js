@@ -580,3 +580,31 @@ console.log(
     "pmac",
   ])
 );
+
+// // task 7 - Рішення від ментора ------------------------
+// function findUniq(array) {
+//   for (let index = 0; index < array.length; index += 1) {
+//     //у поточному елементі масиву літери сортуємо по зростанню
+//     const normalizeValue = array[index].split('').sort().join('');
+
+//     //робимо копію оригінального масиву
+//     const copyOriginalArray = [...array];
+
+//     // видаляємо з копії оригінального масиву поточний елемент
+//     copyOriginalArray.splice(index, 1);
+
+//     //в кожному рядку в новому масиві (без поточного видаленого елемента) теж літери сортуємо по зростанню
+//     const withoutElementArray = copyOriginalArray.map(el => el.split('').sort().join(''));
+
+//     //перевіряємо, якщо в масиві що лишився після видалення елемента, вже немає дубляжів, то це і є наш результат
+//     if (!withoutElementArray.includes(normalizeValue)) {
+//       return array[index];
+//     }
+//   }
+//   return 'not found the uniq string =(';
+// }
+
+// console.log(findUniq(['qwe', 'camp', 'acmp', 'pmac', 'camp', 'apmc', 'pmac'])); //працює
+// console.log(findUniq(['abc', 'acb', 'bac', 'foo', 'bca', 'cab', 'cba'])); //працює!
+// console.log(findUniq(['fghj', 'ghfj', 'abcd', 'jhgf', 'fghj', 'fgjh', 'ghjf'])); //працює!
+// console.log(findUniq(['camp', 'acmp', 'pmac', 'camp', 'apmc', 'pmac'])); // нема відрізняючого елемента //працює
