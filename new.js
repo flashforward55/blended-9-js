@@ -544,67 +544,123 @@ alert(text);
 // }
 
 // console.log(findUniq(['qwe', 'camp', 'acmp', 'pmac', 'camp', 'apmc', 'pmac']));
-const arrayUniquse = [];
-function findUniq(arr) {
-  const newArr = arr.map((string) => {
-    return string.split("").sort().join("");
-    // return [...string].sort().join("");
-  });
-  for (let i = 0; i < newArr.length; i++) {
-    const comparisonElement = newArr[i];
-    let acc = 0;
-    newArr.forEach((element) => {
-      if (comparisonElement === element) {
-        acc += 1;
-      }
-    });
-    if (acc === 1) {
-      arrayUniquse.push(arr[i]);
-    }
-  }
-  return arrayUniquse;
-}
+// const arrayUniquse = [];
+// function findUniq(arr) {
+//   const newArr = arr.map((string) => {
+//     return string.split("").sort().join("");
+//     // return [...string].sort().join("");
+//   });
+//   for (let i = 0; i < newArr.length; i++) {
+//     const comparisonElement = newArr[i];
+//     let acc = 0;
+//     newArr.forEach((element) => {
+//       if (comparisonElement === element) {
+//         acc += 1;
+//       }
+//     });
+//     if (acc === 1) {
+//       arrayUniquse.push(arr[i]);
+//     }
+//   }
+//   return arrayUniquse;
+// }
 
-console.log(
-  findUniq([
-    "qwe",
-    "camp",
-    "acmp",
-    "pmac",
-    "hgt",
-    "yytr",
-    "yytr",
-    "camp",
-    "cp",
-    "apmc",
-    "pmac",
-  ])
-);
+// console.log(
+//   findUniq([
+//     "qwe",
+//     "camp",
+//     "acmp",
+//     "pmac",
+//     "hgt",
+//     "yytr",
+//     "yytr",
+//     "camp",
+//     "cp",
+//     "apmc",
+//     "pmac",
+//   ])
+// );
 
-// // task 7 - Рішення від ментора ------------------------
+// task 7 - Рішення від ментора ------------------------
 // function findUniq(array) {
 //   for (let index = 0; index < array.length; index += 1) {
 //     //у поточному елементі масиву літери сортуємо по зростанню
-//     const normalizeValue = array[index].split('').sort().join('');
+//     const normalizeValue = array[index].split("").sort().join("");
 
+//     console.log(normalizeValue);
 //     //робимо копію оригінального масиву
 //     const copyOriginalArray = [...array];
+
+//     console.log(copyOriginalArray);
 
 //     // видаляємо з копії оригінального масиву поточний елемент
 //     copyOriginalArray.splice(index, 1);
 
 //     //в кожному рядку в новому масиві (без поточного видаленого елемента) теж літери сортуємо по зростанню
-//     const withoutElementArray = copyOriginalArray.map(el => el.split('').sort().join(''));
+//     const withoutElementArray = copyOriginalArray.map((el) =>
+//       el.split("").sort().join("")
+//     );
 
 //     //перевіряємо, якщо в масиві що лишився після видалення елемента, вже немає дубляжів, то це і є наш результат
 //     if (!withoutElementArray.includes(normalizeValue)) {
 //       return array[index];
 //     }
 //   }
-//   return 'not found the uniq string =(';
+//   return "not found the uniq string =(";
 // }
 
-// console.log(findUniq(['qwe', 'camp', 'acmp', 'pmac', 'camp', 'apmc', 'pmac'])); //працює
-// console.log(findUniq(['abc', 'acb', 'bac', 'foo', 'bca', 'cab', 'cba'])); //працює!
-// console.log(findUniq(['fghj', 'ghfj', 'abcd', 'jhgf', 'fghj', 'fgjh', 'ghjf'])); //працює!
-// console.log(findUniq(['camp', 'acmp', 'pmac', 'camp', 'apmc', 'pmac'])); // нема відрізняючого елемента //працює
+console.log(findUniq(["qwe", "camp", "acmp", "pmac", "camp", "apmc", "pmac"])); //працює
+console.log(findUniq(["abc", "acb", "bac", "foo", "bca", "cab", "cba"])); //працює!
+console.log(findUniq(["fghj", "ghfj", "abcd", "jhgf", "fghj", "fgjh", "ghjf"])); //працює!
+console.log(findUniq(["camp", "acmp", "pmac", "camp", "apmc", "pmac"])); // нема відрізняючого елемента //працює
+
+const items = ["qwe", "camp", "acmp", "pmac", "camp", "apmc", "pmac"];
+
+const numbers = items.map((items) => {
+  return items.charCodeAt(0);
+});
+console.log(numbers);
+
+// const dublicats = numbers.filter((number, index, numbers) => {
+//   return numbers.indexOf(number) !== index;
+// });
+// console.log(dublicats);
+
+let uniqueNumber = numbers[0];
+
+for (const number of numbers) {
+  if (number === uniqueNumber) {
+    uniqueNumber = number;
+  }
+}
+
+console.log(uniqueNumber);
+console.log(items[numbers.indexOf(uniqueNumber)]);
+
+function findUniq(array) {
+  const numbers = array.map((array) => {
+    return array.charCodeAt(0);
+  });
+  console.log(numbers);
+
+  let uniqueNumber = numbers[0];
+
+  for (const number of numbers) {
+    if (number === uniqueNumber) {
+      uniqueNumber = number;
+    }
+  }
+
+  console.log(uniqueNumber);
+
+  const item = numbers.indexOf(uniqueNumber);
+  console.log(item);
+
+  const finish = array.find((element, index) => index === item);
+  console.log(finish);
+}
+
+findUniq(["qwe", "camp", "acmp", "pmac", "camp", "apmc", "pmac"]); //працює
+findUniq(["abc", "acb", "bac", "foo", "bca", "cab", "cba"]); //працює!
+findUniq(["fghj", "ghfj", "abcd", "jhgf", "fghj", "fgjh", "ghjf"]); //працює!
+findUniq(["camp", "acmp", "pmac", "camp", "apmc", "pmac"]);
