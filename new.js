@@ -733,6 +733,27 @@ findUniq(["camp", "acmp", "pmac", "camp", "apmc", "pmac"]);
 Задача 4
 Кнопка "Уменьшить" делает квадрат меньше на 10 пикселей, кпопка "Увеличить" - больше на 10 пикселей.
 */
+// let widthEl = 0;
+
+const boxEl = document.querySelector("#box-box");
+const decreaseBtn = document.querySelector("#decrease");
+const decreaseBtnClick = () => {
+  const widthEl = Number(boxEl.offsetWidth) - 10;
+  boxEl.style.width = `${widthEl}px`;
+  boxEl.style.height = `${widthEl}px`;
+  console.log(widthEl);
+};
+decreaseBtn.addEventListener("click", decreaseBtnClick);
+console.log(boxEl.offsetWidth);
+
+const increaseBtn = document.querySelector("#increase");
+const increaseClick = () => {
+  const widthEl = Number(boxEl.offsetWidth) + 10;
+  boxEl.style.width = `${widthEl}px`;
+  boxEl.style.height = `${widthEl}px`;
+  console.log(widthEl);
+};
+increaseBtn.addEventListener("click", increaseClick);
 
 // ===================================================
 // ===================================================
