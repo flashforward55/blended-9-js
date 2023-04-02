@@ -670,13 +670,13 @@ findUniq(["camp", "acmp", "pmac", "camp", "apmc", "pmac"]);
 Задача 1
 Нажатие на кновку "SHOW ME" должно выводить значение с поля ввода (смотрите на элементы в html-разметке)
 */
-const p = document.querySelector('.taskTitle');
-const button = document.querySelector('#alertButton');
-const input = document.querySelector('#alertInput');
+// const p = document.querySelector('.taskTitle');
+// const button = document.querySelector('#alertButton');
+// const input = document.querySelector('#alertInput');
 
-button.addEventListener('click', e => {
-  alert(input.value);
-});
+// button.addEventListener('click', e => {
+//   alert(input.value);
+// });
 // ===================================================
 // ===================================================
 
@@ -686,6 +686,21 @@ button.addEventListener('click', e => {
 можете понажимать на нее несколько раз или вручную сменить содержимое инпутов.
 */
 
+// const swapButton = document.querySelector("#swapButton");
+// const leftSwapInput = document.querySelector("#leftSwapInput");
+// const rightSwapInput = document.querySelector("#rightSwapInput");
+
+// swapButton.addEventListener("click", swapButtonClick);
+
+// function swapButtonClick() {
+//   const leftInput = leftSwapInput.value;
+//   leftSwapInput.value = rightSwapInput.value;
+//   rightSwapInput.value = leftInput;
+// }
+
+// d="swapButton">SWAP ME</button>
+//         <input id="leftSwapInput" type="text" value="???" />
+//         <input id="rightSwapInput
 // ===================================================
 // ===================================================
 
