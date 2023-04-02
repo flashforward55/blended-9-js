@@ -711,6 +711,21 @@ findUniq(["camp", "acmp", "pmac", "camp", "apmc", "pmac"]);
 и кнопка принимает начальный вид.
 */
 
+// const passwordInput = document.querySelector("#passwordInput");
+// const passwordButton = document.querySelector("#passwordButton");
+
+// passwordButton.addEventListener("click", hidePassword);
+
+// function hidePassword() {
+//   if (passwordInput.type === "text") {
+//     passwordInput.type = "password";
+//     passwordButton.textContent = "Раскрыть";
+//   } else {
+//     passwordInput.type = "text";
+//     passwordButton.textContent = "Скрыть";
+//   }
+// }
+
 // ===================================================
 // ===================================================
 
