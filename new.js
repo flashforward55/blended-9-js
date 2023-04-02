@@ -735,25 +735,25 @@ findUniq(["camp", "acmp", "pmac", "camp", "apmc", "pmac"]);
 */
 // let widthEl = 0;
 
-const boxEl = document.querySelector("#box-box");
-const decreaseBtn = document.querySelector("#decrease");
-const decreaseBtnClick = () => {
-  const widthEl = Number(boxEl.offsetWidth) - 10;
-  boxEl.style.width = `${widthEl}px`;
-  boxEl.style.height = `${widthEl}px`;
-  console.log(widthEl);
-};
-decreaseBtn.addEventListener("click", decreaseBtnClick);
-console.log(boxEl.offsetWidth);
+// const boxEl = document.querySelector("#box");
+// const decreaseBtn = document.querySelector("#decrease");
+// const decreaseBtnClick = () => {
+//   const widthEl = Number(boxEl.offsetWidth) - 10;
+//   boxEl.style.width = `${widthEl}px`;
+//   boxEl.style.height = `${widthEl}px`;
+//   console.log(widthEl);
+// };
+// decreaseBtn.addEventListener("click", decreaseBtnClick);
+// console.log(boxEl.offsetWidth);
 
-const increaseBtn = document.querySelector("#increase");
-const increaseClick = () => {
-  const widthEl = Number(boxEl.offsetWidth) + 10;
-  boxEl.style.width = `${widthEl}px`;
-  boxEl.style.height = `${widthEl}px`;
-  console.log(widthEl);
-};
-increaseBtn.addEventListener("click", increaseClick);
+// const increaseBtn = document.querySelector("#increase");
+// const increaseClick = () => {
+//   const widthEl = Number(boxEl.offsetWidth) + 10;
+//   boxEl.style.width = `${widthEl}px`;
+//   boxEl.style.height = `${widthEl}px`;
+//   console.log(widthEl);
+// };
+// increaseBtn.addEventListener("click", increaseClick);
 
 // ===================================================
 // ===================================================
@@ -764,7 +764,14 @@ increaseBtn.addEventListener("click", increaseClick);
 внутри элемента с id "place" и когда клик приходится вне зоны элемента
 https://developer.mozilla.org/en-US/docs/Web/API/Node/contains
 */
-
+// const place = document.querySelector("#place");
+// document.addEventListener("click", (e) => {
+//   if (place.contains(e.target)) {
+//     console.log("bingooooooo");
+//   } else {
+//     console.log("fuuuuuuuu");
+//   }
+// });
 // ===================================================
 // ===================================================
 
