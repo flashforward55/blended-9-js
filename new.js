@@ -698,9 +698,6 @@ findUniq(["camp", "acmp", "pmac", "camp", "apmc", "pmac"]);
 //   rightSwapInput.value = leftInput;
 // }
 
-// d="swapButton">SWAP ME</button>
-//         <input id="leftSwapInput" type="text" value="???" />
-//         <input id="rightSwapInput
 // ===================================================
 // ===================================================
 
