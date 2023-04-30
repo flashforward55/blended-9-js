@@ -23,3 +23,10 @@ export function createMarkupProduct({images, title, price}) {
       <h3>${title}</h3>
       <p>${price} $</p>`
 }
+
+export function createMarkupNewProduct({ title, description, price}) {
+  return `
+    <h3>${title}</h3>
+      <p>${description} $</p>
+     <p>${price} $</p> `
+}
